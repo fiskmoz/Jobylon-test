@@ -5,8 +5,15 @@
 {% block content %}
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
-{% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">login</a>
 {% endif %}
+<ol>
+  {% for user in users %}
+  <li>
+    <a href="{% url 'usermessaging' user.get_username %}"> 
+      {{ user.get_username }}
+    </a>
+  </li>
+  {% endfor %}
+</ol>
+
 {% endblock %}

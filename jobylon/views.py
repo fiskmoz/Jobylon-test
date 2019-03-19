@@ -7,7 +7,8 @@ def homepage_view(request):
     if not request.user.is_authenticated: 
         return redirect('login')
     if request.method == "GET":
-        return render(request, 'home.html', {})
+        users = User.objects.all()
+        return render(request, 'home.html', {'users': users})
 
 def signup_view(request):
     if request.method == 'POST':
