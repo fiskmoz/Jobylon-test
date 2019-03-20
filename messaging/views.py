@@ -14,7 +14,7 @@ def message_view(request, username):
         form = MessageForm(request.POST or None)
         if form.is_valid():
             formmessage = form.cleaned_data['message']
-            message = Message(Sender=request.user, Receiver = User.objects.get(username=username), Message = formmessage, Date=tiezone)
+            message = Message(Sender=request.user, Receiver = User.objects.get(username=username), Message = formmessage)
             message.save()
     messages = Message.objects.filter(Q(Sender=request.user.username, Receiver= username) | Q(Sender=username, Receiver = request.user.username)).order_by('Date')
     form = MessageForm()
