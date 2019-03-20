@@ -1,6 +1,5 @@
 from django.contrib import admin
 from messaging.models import Message
 
-# Register your models here.
-
+# Registered message models to admin panel
 admin.site.register(Message)

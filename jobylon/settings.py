@@ -25,8 +25,9 @@ SECRET_KEY = 'w5^o(v2c%kl$d8po=$r=(ld275o^9$2!8+c8)whxj!5mc$4d#i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fiskmoz.pythonanywhere.com']
 
+# REDIRECT HOME ON SUCCESSFULL LOGIN OR LOGOUT
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 

@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html>
+{% extends 'base.html' %}
+
+{% block content %}
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -12,19 +13,19 @@
 <h2>Chat Messages</h2>
 
 {% for message in messages %}
-{% if message.Sender.username == me %}
-<div class="container">
-  <h3> You: </h3>
-  <p>{{ message.Message }} </p>
-  <span class="right">{{ message.Date }}</span>
-</div>
-{% else %}
-<div class="container darker">
-    <h3>{{ chatfriend }}: </h3>
-    <p>{{ message.Message }}</p>
-    <span class="right">{{ message.Date }}</span>
-  </div>
-{% endif %}
+  {% if message.Sender.username == me %}
+    <div class="container">
+      <h3> You: </h3>
+      <p>{{ message.Message }} </p>
+      <span class="right">{{ message.Date }}</span>
+    </div>
+  {% else %}
+    <div class="container darker">
+        <h3>{{ chatfriend }}: </h3>
+        <p>{{ message.Message }}</p>
+        <span class="right">{{ message.Date }}</span>
+      </div>
+  {% endif %}
 {% endfor %}
 
 <form action="" method="POST"> 
@@ -35,4 +36,4 @@
 </form>
 
 </body>
-</html>
+{% endblock %}

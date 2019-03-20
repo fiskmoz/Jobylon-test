@@ -3,13 +3,14 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 
+# The view for the homepage.
 def homepage_view(request):
     if not request.user.is_authenticated: 
         return redirect('login')
-    if request.method == "GET":
-        users = User.objects.all()
-        return render(request, 'home.html', {'users': users})
+    users = User.objects.all()
+    return render(request, 'home.html', {'users': users})
 
+# The view for the registration form.
 def signup_view(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST or None)
