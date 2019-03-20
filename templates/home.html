@@ -9,7 +9,7 @@
 <ol>
   {% for eachuser in users %}
   {% if not eachuser.username == user.username %}
-  <li>
+  <li class="container">
     <a href="{% url 'usermessaging' eachuser.username %}"> 
       {{ eachuser.username }}
     </a>
