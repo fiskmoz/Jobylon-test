@@ -37,7 +37,11 @@ body {
 </style>
 </head>
 <body>
-
+<div style="position: absolute;; right:10%; top:1%; ">
+    <a href="{% url 'home' %}">
+      <button class="container" >Home</button>
+    </a>
+</div>
 <h2>Chat Messages</h2>
 
 {% for message in messages %}
@@ -62,5 +66,6 @@ body {
     <br>
     <input class="container" type="submit" value="Send">
 </form>
+
 </body>
 </html>

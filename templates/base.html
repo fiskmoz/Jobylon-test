@@ -9,5 +9,19 @@
     {% block content %}
     {% endblock %}
   </main>
+  <br>
+  {% if not user.is_authenticated %}
+  <div style="float:left">
+    <a href="{% url 'login' %}">
+      <button>Login</button>
+    </a>
+  </div>
+  {% else %}
+  <div style="float:left">
+      <a href="{% url 'logout' %}">
+        <button>Logout</button>
+      </a>
+    </div>
+  {% endif %}
 </body>
 </html>
