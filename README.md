@@ -1,5 +1,5 @@
 # Messaging service
-A smal online messaging servic initially made for a recruitment process
+A smal online messaging service initially made for a recruitment process
 
 # Hosting
 This service is currently hosted and can be used at:
