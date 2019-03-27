@@ -1,5 +1,9 @@
-# Jobylon-test
-A test for Jobylon recruitment process
+# Messaging service
+A smal online messaging servic initially made for a recruitment process
+
+# Hosting
+This service is currently hosted and can be used at:
+www.fiskmoz.pythonanywhere.com
 
 # How to run locally
 * Have python 3.7.1 installed
